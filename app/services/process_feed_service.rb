@@ -165,14 +165,9 @@ class ProcessFeedService < BaseService
       [status, true]
     end
 
-<<<<<<< HEAD
-    def find_or_resolve_status(parent, uri, url)
-      status = find_status(uri)
-=======
     def find_or_create_conversation(xml)
       uri = xml.at_xpath('./ostatus:conversation', ostatus: TagManager::OS_XMLNS)&.attribute('ref')&.content
       return if uri.nil?
->>>>>>> tags/v1.4.3
 
       if TagManager.instance.local_id?(uri)
         local_id = TagManager.instance.unique_tag_to_local_id(uri, 'Conversation')
