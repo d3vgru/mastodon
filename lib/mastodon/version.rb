@@ -5,19 +5,19 @@ module Mastodon
     module_function
 
     def major
-      1
+      2
     end
 
     def minor
-      6
-    end
-
-    def patch
       1
     end
 
+    def patch
+      0
+    end
+
     def pre
-      nil
+      ''
     end
 
     def flags
